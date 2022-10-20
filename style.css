@@ -1,0 +1,41 @@
+*{
+    font-family: sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#nama{
+    font-size: 30px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+#foto{
+    border-radius: 100px;
+}
+
+#skillset{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#top{
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: lightgrey;
+}
+
+#contact{
+    align-content: center;
+    background-color: whitesmoke;
+    background-size: cover;
+}
+
+#main{
+    background-color: whitesmoke;
+    background-size: cover;
+}
+
+
+
