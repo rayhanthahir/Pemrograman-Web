@@ -1,0 +1,61 @@
+@media screen and (min-width: 480px) {
+
+*{
+    font-family: sans-serif;
+    margin-top: 0px;
+    margin-bottom: px;
+}
+
+table{
+    border: 0px solid black;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.navBar{
+    display: flex;
+    background-color:  rgb(168, 168, 168);
+}
+
+.navBar a {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#nama{
+    font-size: 30px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+#foto{
+    border-radius: 100px;
+}
+
+#skillset{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#top{
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: lightgrey;
+}
+
+#contact{
+    align-content: center;
+    background-color: whitesmoke;
+    background-size: cover;
+}
+
+#main{
+    background-color: whitesmoke;
+    background-size: cover;
+}
+}
