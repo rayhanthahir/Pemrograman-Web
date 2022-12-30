@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+    <div id="row">
+    <center>
+    <h1>Make your choice:</h1>
+        <tr>
+            <td>
+                <img src="rock.jpg" name="rock" id = "rock" width="28.75%">
+            </td>
+            <td>
+                <img src="paper.jpg" name="paper" id = "paper" width="30%">
+            </td>
+            <td>
+                <img src="scissor.jpg" name="scissors" id = "scissors" width="31%">
+            </td>
+        </tr>
+    </table>
+    </div>  
+ 
+
+    <center>
+    <h1>Computer Chose:</h1>
+    <script language=javascript>
+        var userChoice = null;
+        var computerChoice = null;
+        $(document).ready(
+            function ()
+            {
+                 $('#rock').click(function(){
+                    userChoice = "rock";
+                    newComputerChoice();
+                    computResult();
+                });
+                $('#paper').click(function(){
+                    userChoice = "paper";
+                    newComputerChoice ();
+                    computResult();
+                });
+                $('#scissors').click(function(){
+                    userChoice = "scissors";
+                    newComputerChoice ();
+                    computResult(user_score,comp_score);
+                });
+            }
+        );
+
+        function newComputerChoice ()
+        {
+            computerChoice = Math.floor(Math.random() * 3) + 1;
+            //take the random number from computerChoice above and assign it rock paper or scissors.
+            if (computerChoice == 1)
+                {
+                    computerChoice = "rock";
+                }
+            else if (computerChoice == 2)
+                {
+                    computerChoice = "paper";
+                }
+            else 
+                {
+                    computerChoice = "scissors";
+                }
+
+        }
+        function computResult(user_score,comp_score)
+        {
+            var result; 
+            if (userChoice == computerChoice){
+                result="Tie!";
+            } else if (userChoice == "rock" && computerChoice == "scissors"){
+                result="You win!";
+                $('score').html('User Score:' + user_score +'|| Computer Score:'+ comp_score);
+            } else if (userChoice == "paper" && computerChoice == "rock"){
+                result="You win!";
+            } else if (userChoice == "scissors" && computerChoice == "paper"){
+                result="You win!";
+            } else if (computerChoice == "rock" && userChoice == "scissors"){
+                result="Sorry, you lose.";
+            } else if (computerChoice == "paper" && userChoice == "rock"){
+                result="Sorry, you lose.";
+            } else if (computerChoice == "scissors" && userChoice == "paper"){
+                result="Sorry, you lose.";
+            }
+            var table=document.getElementById("result");
+            var row=table.insertRow(table.rows.length);
+            var cell=row.insertCell(row.cells.length);
+            var img=document.createElement("img");
+            img.src=document.getElementById(computerChoice).src;
+            $(cell).append(img);
+            cell=row.insertCell(row.cells.length);
+            cell.innerHTML=result;
+            cell=row.insertCell(row.cells.length);
+            img=document.createElement("img");
+            img.src=document.getElementById(userChoice).src;
+            $(cell).append(img);
+        }
+
+
+
+    </script>
+    <table id="result">
+        <center>
+        <tr>
+            <td align="center" id="comp">Computer Choice</td>
+            <td align="center" id="resultTab">Result</td>
+            <td align="center" id="user">Your Choice</td>
+        </tr>  
+    </center> 
+    <style>
+        #comp{
+            background-color: orange;
+        }
+        #resultTab{
+            background-color: yellow;
+        }
+        #user{
+            background-color: orangered;
+        }
+        #result{
+            background-color: yellow;
+        }
+    </style>
+    </table>
+    </body>
+    </html>
